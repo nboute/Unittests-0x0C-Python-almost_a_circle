@@ -1,0 +1,6 @@
+# Take any of these commands and test then for your shell
+echo "/bin/ls" | ./hsh
+echo "ls" | PATH1=$PATH PATH="" ./hsh
+echo "unsetenv" | ./hsh
+echo "    " | ./hsh
+echo "		" | ./hsh

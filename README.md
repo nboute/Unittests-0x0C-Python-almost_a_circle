@@ -6,7 +6,7 @@ Siham: from json string, __init__ square
 
 Pierre: __init__ base, create base
 
-Nicolas: to_dictionary square, size.setter square
+Nicolas: size.setter square,  load_from_file base
 
 Romi: update rectangle, area rectangle
 
@@ -18,7 +18,7 @@ Côme: setter x2, save_to_file base
 
 Raphael: __init__ rectangle, setter x2
 
-Lucille: load_from_file base
+Lucille: to_dictionary square
 
 This repository is a collaboration between students of Holberton  France
 ### [0. If it's not tested it doesn't work]

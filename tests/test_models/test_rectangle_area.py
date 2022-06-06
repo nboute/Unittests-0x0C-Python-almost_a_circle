@@ -20,7 +20,7 @@ class TestArea(unittest.TestCase):
         with self.assertRaises(TypeError):
             a = Rectangle(0.3, 5)
             a.area()
-    
+
     def test_area_rectangle3(self):
         """ test with int for width and float for heigt """
         with self.assertRaises(TypeError):
@@ -134,6 +134,12 @@ class TestArea(unittest.TestCase):
         with self.assertRaises(TypeError):
             a = Rectangle("Hello!")
             a.area()
+
+    def test_area_rectangle22(self):
+        """ test with 1 string """
+        with self.assertRaises(TypeError):
+            a = Rectangle.area()
+
 
 if __name__ == "__main__":
     unittest.main()

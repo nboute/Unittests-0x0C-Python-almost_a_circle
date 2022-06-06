@@ -17,7 +17,7 @@ class TestBase(unittest.TestCase):
     """
         test for comments for base rectangle and square files
     """
-    def test_conformance(self):
+    def test_conformance_base(self):
         """
             Test that we conform to PEP-8 for Base
         """
@@ -25,7 +25,7 @@ class TestBase(unittest.TestCase):
         result = style.check_files(['models/base.py'])
         self.assertEqual(result.total_errors, 0)
 
-    def test_conformance(self):
+    def test_conformance_rectangle(self):
         """
             Test that we conform to PEP-8 for Rectangle
         """
@@ -33,7 +33,7 @@ class TestBase(unittest.TestCase):
         result = style.check_files(['models/rectangle.py'])
         self.assertEqual(result.total_errors, 0)
 
-    def test_conformance(self):
+    def test_conformance_square(self):
         """
             Test that we conform to PEP-8 for Square
         """

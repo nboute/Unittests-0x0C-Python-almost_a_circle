@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Unittest for Rectangle
+    Unittest for Rectangle.
 """
 
 import unittest

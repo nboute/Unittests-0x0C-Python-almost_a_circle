@@ -27,6 +27,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_str(self):
         """test the output of the instance when printed"""
+        Base._Base__nb_objects = 0
         with patch('sys.stdout', new=io.StringIO()) as fake_stdout:
             print(Rectangle(4, 8))
         assert fake_stdout.getvalue() == '[Rectangle] (1) 0/0 - 4/8\n'

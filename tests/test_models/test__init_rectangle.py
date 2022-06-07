@@ -27,34 +27,56 @@ class TestRectangle(unittest.TestCase):
             r1 = Rectangle("f", "f", "f", "f", "f")
 
     def test_value_is_negativ(self):
+        """test if value is neg
+        """
         with self.assertRaises(ValueError):
             r1 = Rectangle(-10, -2, -2, -0, -12)
 
     def test_value_is_width_heigt_not_neg(self):
+        """test if width and height is not neg
+        """
         with self.assertRaises(ValueError):
             r1 = Rectangle(0, 0, -2, -0, -12)
 
     def test_value_is_x_y_not_neg(self):
+        """test if x and y are not neg
+        """
         with self.assertRaises(ValueError):
             r1 = Rectangle(10, 10, -1, -1, 12)
 
     def test_value_is_not_tuple(self):
+        """test W and H with tuples
+        """
         with self.assertRaises(ValueError):
             r2 = Rectangle((1, -10), -2, -2, -0, -12)
 
+    def test_value_is_not_tuple(self):
+        """test X and Y with tuples
+        """
+        with self.assertRaises(TypeError):
+            r2 = Rectangle(1, -10, -2, (1, 10) - 12)
+
     def test_value_is_not_list(self):
+        """test W and H with list
+        """
         with self.assertRaises(ValueError):
             r2 = Rectangle([1, -10], -2, -2, -0, -12)
 
     def test_value_is_not_dict(self):
+        """test W with dict
+        """
         with self.assertRaises(ValueError):
             r2 = Rectangle({'lolo': -10}, -2, -2, -0, -12)
 
     def test_value_is_not_empty(self):
+        """test empy instance
+        """
         with self.assertRaises(TypeError):
             r2 = Rectangle()
 
     def test_display_None(self):
+        """test with None
+        """
         with self.assertRaises(TypeError):
             r1 = Rectangle(None, None, None, None)
 

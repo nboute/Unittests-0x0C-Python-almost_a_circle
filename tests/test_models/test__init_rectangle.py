@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Unittest for Rectangle.
+    Unittest for Rectangle
 """
 
 import unittest
@@ -38,17 +38,17 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r1 = Rectangle(0, 0, -2, -0, -12)
 
-    def test_value_is_x_y_not_neg(self):
-        """test if x and y are not neg
+    def test_value_is_x_neg(self):
+        """test if x neg
         """
         with self.assertRaises(ValueError):
-            r1 = Rectangle(10, 10, -1, -1, 12)
+            r1 = Rectangle(10, 10, 1, -1, 12)
 
     def test_value_is_not_tuple(self):
         """test W and H with tuples
         """
         with self.assertRaises(TypeError):
-            r2 = Rectangle((1, -10), -2, -2, -0, -12)
+            r2 = Rectangle(3, 2, 2, (1, -10), 12)
 
     def test_y_is_not_tuple(self):
         """test X and Y with tuples
@@ -60,13 +60,13 @@ class TestRectangle(unittest.TestCase):
         """test W and H with list
         """
         with self.assertRaises(TypeError):
-            r2 = Rectangle([1, -10], -2, -2, -0, -12)
+            r2 = Rectangle(3, 2, 2, [1, -10], 12)
 
     def test_value_is_not_dict(self):
         """test W with dict
         """
         with self.assertRaises(TypeError):
-            r2 = Rectangle({'lolo': -10}, -2, -2, -0, -12)
+            r2 = Rectangle(2, 2, 2, {'lolo': -10}, 12)
 
     def test_value_is_not_empty(self):
         """test empy instance
@@ -142,11 +142,11 @@ class TestRectangle(unittest.TestCase):
 
     def test_x_getter(self):
         rect = Rectangle(2, 3, 4, 5, 6)
-        self.assertEqual(5, rect.x)
+        self.assertEqual(4, rect.x)
 
     def test_y_getter(self):
         rect = Rectangle(2, 3, 4, 5, 6)
-        self.assertEqual(6, rect.y)
+        self.assertEqual(5, rect.y)
 
 
 if __name__ == '__main__':

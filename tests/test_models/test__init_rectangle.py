@@ -47,7 +47,7 @@ class TestRectangle(unittest.TestCase):
     def test_value_is_not_tuple(self):
         """test W and H with tuples
         """
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r2 = Rectangle((1, -10), -2, -2, -0, -12)
 
     def test_y_is_not_tuple(self):
@@ -59,13 +59,13 @@ class TestRectangle(unittest.TestCase):
     def test_value_is_not_list(self):
         """test W and H with list
         """
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r2 = Rectangle([1, -10], -2, -2, -0, -12)
 
     def test_value_is_not_dict(self):
         """test W with dict
         """
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r2 = Rectangle({'lolo': -10}, -2, -2, -0, -12)
 
     def test_value_is_not_empty(self):
@@ -136,8 +136,8 @@ class TestRectangle(unittest.TestCase):
 
     def test_y_setter_tuple(self):
         """Test y tuple"""
+        r = Rectangle(1, 7, 0, 0, 1)
         with self.assertRaises(TypeError):
-            r = Rectangle(1, 7, 0, 0, 1)
             r.y = (1, 2)
 
 

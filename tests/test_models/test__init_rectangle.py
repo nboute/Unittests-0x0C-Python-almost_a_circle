@@ -32,8 +32,8 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r1 = Rectangle(-10, -2, -2, -0, -12)
 
-    def test_value_is_width_heigt_not_neg(self):
-        """test if width and height is not neg
+    def test_value_is_x_heigt_not_neg(self):
+        """test if x and x is not neg
         """
         with self.assertRaises(ValueError):
             r1 = Rectangle(0, 0, -2, -0, -12)
@@ -50,7 +50,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r2 = Rectangle((1, -10), -2, -2, -0, -12)
 
-    def test_value_is_not_tuple(self):
+    def test_y_is_not_tuple(self):
         """test X and Y with tuples
         """
         with self.assertRaises(TypeError):
@@ -79,6 +79,66 @@ class TestRectangle(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             r1 = Rectangle(None, None, None, None)
+
+    def test_x_setter(self):
+        """Test x setter"""
+        r = Rectangle(5, 7, 0, 0, 1)
+        r.x = 10
+        self.assertEqual(10, r.x)
+
+    def test_y_setter(self):
+        """Test y setter"""
+        r = Rectangle(5, 7, 30, 30, 10)
+        r.y = 10
+        self.assertEqual(10, r.y)
+
+    def test_x_setter_neg(self):
+        """Test x setter neg"""
+        with self.assertRaises(ValueError):
+            r = Rectangle(5, 7, 30, 30, 1)
+            r.x = -10
+
+    def test_y_setter_neg(self):
+        """Test y setter negative"""
+        with self.assertRaises(ValueError):
+            r = Rectangle(5, 7, 10, 30, 1)
+            r.y = -10
+
+    def test_x_setter_string(self):
+        """Test x setter string"""
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 7, 0, 0, 1)
+            r.x = "lolo"
+
+    def test_y_setter_string(self):
+        """Test y setter string"""
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 7, 0, 0, 1)
+            r.y = "lolo"
+
+    def test_x_setter_empty(self):
+        """Test x empty"""
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 7, 0, 0, 1)
+            r.x = None
+
+    def test_y_setter_empty(self):
+        """Test y empty"""
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 7, 0, 0, 1)
+            r.y = None
+
+    def test_x_setter_tuple(self):
+        """Test x tuple"""
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 7, 0, 0, 1)
+            r.x = (1, 2)
+
+    def test_y_setter_tuple(self):
+        """Test y tuple"""
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 7, 0, 0, 1)
+            r.y = (1, 2)
 
 
 if __name__ == '__main__':

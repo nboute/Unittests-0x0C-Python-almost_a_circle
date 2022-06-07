@@ -6,6 +6,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 from models.base import Base
 
+
 class TestSquareSize(unittest.TestCase):
     """ tests for size setter/getter of square.py """
 

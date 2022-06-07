@@ -1,16 +1,26 @@
 
 # Unittests for project 0x0C-Almost a circle.
-## Who test what:
+## Who test what?:
 Alexandre: to_dictionary rectangle, __str__ rectangle
+
 Siham: from json string, __init__ square
+
 Pierre: __init__ base, create base
-Nicolas: to_dictionary square, size.setter square
+
+Nicolas: size.setter square,  load_from_file base
+
 Romi: update rectangle, area rectangle
+
 Greg: display rectangle, __str__ square
+
 Tommy: to_json_string, update square
+
 Côme: setter x2, save_to_file base
+
 Raphael: __init__ rectangle, setter x2
-Lucille: load_from_file base
+
+Lucille: to_dictionary square
+
 This repository is a collaboration between students of Holberton  France
 ### [0. If it's not tested it doesn't work]
 * All your files, classes and methods must be unit tested and be PEP 8 validated.

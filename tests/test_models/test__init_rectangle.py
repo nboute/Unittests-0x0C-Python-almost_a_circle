@@ -140,6 +140,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.y = (1, 2)
 
+    def test_x_getter(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        self.assertEqual(5, rect.x)
+
+    def test_y_getter(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        self.assertEqual(6, rect.y)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -15,16 +15,16 @@ from models.square import Square
 from models.base import Base
 
 
-class Square(Rectangle):
-    """Class Square"""
+# class Square(Rectangle):
+#     """Class Square"""
 
-    def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(size, size, x, y, id)
+#     def __init__(self, size, x=0, y=0, id=None):
+#         super().__init__(size, size, x, y, id)
 
-    def __str__(self):
-        """ Special Method STR """
-        st = "[Square] ({:d}) {:d}/{:d} - {:d}"
-        return st.format(self.id, self.x, self.y, self.width)
+#     def __str__(self):
+#         """ Special Method STR """
+#         st = "[Square] ({:d}) {:d}/{:d} - {:d}"
+#         return st.format(self.id, self.x, self.y, self.width)
 
     def test_create(self):
         """test normal use of create"""

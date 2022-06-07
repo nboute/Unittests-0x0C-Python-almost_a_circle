@@ -1,20 +1,16 @@
+
 #!/usr/bin/python3
-"""
-Add unittest for the Square class
-"""
-import unittest
-import inspect
-import io
-import json
-import os
-from contextlib import redirect_stdout
-from models.square import Square
-from models.base import Base
+"""Module square"""
+from models.rectangle import Rectangle
 
 
-class TestSquare(unittest.TestCase):
-    """Test the functionalities of the Square class"""
+class Square(Rectangle):
+    """Class Square"""
 
+    def __init__(self, size, x=0, y=0, id=None):
+        super().__init__(size, size, x, y, id)
 
-if __name__ == '__main__':
-    unittest.main()
+    def __str__(self):
+        """ Special Method STR """
+        st = "[Square] ({:d}) {:d}/{:d} - {:d}"
+        return st.format(self.id, self.x, self.y, self.width)

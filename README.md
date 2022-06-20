@@ -1,6 +1,6 @@
 
 # Unittests for project 0x0C-Almost a circle.
-## Who test what?:
+## Tests Assignments:
 Alexandre: to_dictionary rectangle, __str__ rectangle
 
 Siham: from json string, __init__ square
